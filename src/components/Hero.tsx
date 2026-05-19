@@ -17,8 +17,8 @@ export default function Hero({ onDonate }: HeroProps) {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-orange-900/60" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-400/40 text-orange-300 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-40">
+        <div className="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-400/40 text-orange-300 text-xs font-semibold tracking-widest uppercase px-4 py-2 mb-8">
           <Heart size={12} className="fill-orange-400 text-orange-400" />
           Empowering Young Lives
         </div>
@@ -37,22 +37,22 @@ export default function Hero({ onDonate }: HeroProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={onDonate}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-base transition-all shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 active:scale-95 min-w-[180px]"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-base transition-all shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 active:scale-95 min-w-[180px]"
           >
             Donate Now
           </button>
           <a
             href="#programs"
-            className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-base transition-all hover:bg-white/10 min-w-[180px] text-center"
+            className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-4 text-base transition-all hover:bg-white/10 min-w-[180px] text-center"
           >
             Our Programs
           </a>
         </div>
 
-        <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
+        <div className="mt-16 mb-10 grid grid-cols-3 gap-6 max-w-lg mx-auto">
           {[
-            { value: '500+', label: 'Children Supported' },
-            { value: '12', label: 'Years of Impact' },
+            { value: '50+', label: 'Children Supported' },
+            { value: 'First', label: 'Year of Impact' },
             { value: '3', label: 'Programs Running' },
           ].map((s) => (
             <div key={s.label} className="text-center">

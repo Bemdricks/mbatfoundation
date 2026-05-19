@@ -11,13 +11,7 @@ export default function Footer({ onDonate }: FooterProps) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-black text-sm">MBAT</span>
-              </div>
-              <div>
-                <p className="font-bold text-base leading-tight">MBAT Development Foundation</p>
-                <p className="text-orange-400 text-xs">Empowering Young Lives</p>
-              </div>
+            <img className='h-20 ' src="/src/mbatLogo.png" alt="mbatLogo" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
               We empower young children through quality education and basketball training,
@@ -25,7 +19,7 @@ export default function Footer({ onDonate }: FooterProps) {
             </p>
             <button
               onClick={onDonate}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full text-sm transition-colors"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3  text-sm transition-colors"
             >
               Support Our Mission
             </button>

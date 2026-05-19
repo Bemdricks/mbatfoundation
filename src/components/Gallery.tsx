@@ -1,31 +1,33 @@
+
+
 const images = [
   {
-    src: 'https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg?auto=compress&cs=tinysrgb&w=800',
+    src: 'src/gallery/basketball-training.jpg',
     alt: 'Basketball training session',
     span: 'col-span-2 row-span-2',
   },
   {
-    src: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: 'src/gallery/classroom.jpg',
     alt: 'Children in classroom',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/2277981/pexels-photo-2277981.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: 'src/gallery/mbat003.jpg',
     alt: 'Basketball game',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/1596902/pexels-photo-1596902.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: 'src/gallery/youthBasketball.jpeg',
     alt: 'Youth basketball player',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/8613312/pexels-photo-8613312.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: 'src/gallery/mbt001.jpg',
     alt: 'Youth leadership workshop',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+    src: 'src/gallery/classroom2.jpg',
     alt: 'Students studying',
     span: 'col-span-2',
   },
@@ -49,7 +51,7 @@ export default function Gallery() {
           {images.map((img, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl overflow-hidden group ${img.span}`}
+              className={`relative  overflow-hidden group ${img.span}`}
             >
               <img
                 src={img.src}

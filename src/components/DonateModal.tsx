@@ -48,11 +48,11 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-gray-900/70 backdrop-blur-sm" onClick={handleClose} />
-      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden animate-in">
-        <div className="bg-orange-500 px-8 pt-8 pb-6">
+      <div className="relative bg-white  shadow-2xl w-full max-w-md overflow-hidden animate-in">
+        <div className="bg-gray-900 px-8 pt-8 pb-6">
           <button
             onClick={handleClose}
-            className="absolute top-5 right-5 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors"
+            className="absolute top-5 right-5 w-8 h-8 bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors"
           >
             <X size={16} />
           </button>
@@ -73,7 +73,7 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
               </p>
               <button
                 onClick={handleClose}
-                className="mt-2 bg-orange-500 text-white font-bold px-8 py-3 rounded-full text-sm"
+                className="mt-2 bg-orange-500 text-white font-bold px-8 py-3 text-sm"
               >
                 Close
               </button>
@@ -88,7 +88,7 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
                       key={a}
                       type="button"
                       onClick={() => { setSelected(a); setCustom(''); }}
-                      className={`py-2.5 rounded-xl text-sm font-bold border-2 transition-all ${
+                      className={`py-2.5 text-sm font-bold border-2 transition-all ${
                         selected === a && !custom
                           ? 'bg-orange-500 border-orange-500 text-white'
                           : 'border-gray-200 text-gray-700 hover:border-orange-300'
@@ -103,7 +103,7 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
                   placeholder="Custom amount"
                   value={custom}
                   onChange={(e) => { setCustom(e.target.value); setSelected(null); }}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
+                  className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                 />
               </div>
               <div>
@@ -113,7 +113,7 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Full name"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
+                  className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                 />
               </div>
               <div>
@@ -124,14 +124,14 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
+                  className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                 />
               </div>
               {error && <p className="text-red-500 text-sm">{error}</p>}
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-black py-4 rounded-xl text-base flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-200"
+                className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-black py-4 text-base flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-200"
               >
                 <Heart size={18} className="fill-white" />
                 {loading ? 'Processing...' : `Donate $${finalAmount || '—'}`}

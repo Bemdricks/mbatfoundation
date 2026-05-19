@@ -32,13 +32,7 @@ export default function Navbar({ onDonate }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-            <span className="text-white font-black text-sm tracking-tight">MBAT</span>
-          </div>
-          <div className="hidden sm:block">
-            <p className={`font-bold text-base leading-tight transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>MBAT Development</p>
-            <p className={`text-xs transition-colors ${scrolled ? 'text-orange-500' : 'text-orange-300'}`}>Foundation</p>
-          </div>
+        <img className='w-full h-20 my-4' src="/src/mbatLogo.png" alt="mbatLogo" />
         </a>
 
         <nav className="hidden md:flex items-center gap-7">
@@ -58,13 +52,13 @@ export default function Navbar({ onDonate }: NavbarProps) {
         <div className="flex items-center gap-3">
           <button
             onClick={onDonate}
-            className="hidden md:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-all shadow-md hover:shadow-lg active:scale-95"
+            className="hidden md:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2.5  text-sm transition-all shadow-md hover:shadow-lg active:scale-95"
           >
             Donate Now
           </button>
           <button
             onClick={() => setOpen(!open)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+            className={`md:hidden p-2  transition-colors ${scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>

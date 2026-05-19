@@ -2,29 +2,31 @@ import { Linkedin, Twitter } from 'lucide-react';
 
 const team = [
   {
-    name: 'Michael B. Asante',
+    name: 'Terseer Kelvin Addingi',
     role: 'Founder & Executive Director',
-    bio: 'Former professional basketball player turned educator. Michael founded MBAT with a vision to uplift youth through sport and learning.',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'Former College basketball player turned philantroph. Terseer founded MBAT with a vision to uplift youth through sport and learning.',
+    image: 'https://images.unsplash.com/photo-1606459431839-90b942dc3754?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwbWFsZSUyMHBvdHJhaXRzfGVufDB8fDB8fHww',
   },
   {
-    name: 'Abena T. Mensah',
+    name: 'Bem Benjamin De',
     role: 'Director of Education',
-    bio: 'With 15 years in childhood education, Abena designs and oversees the academic programs that help children reach their full potential.',
-    image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'Bem designs and oversees the academic programs that help children reach their full potential.',
+    image: 'https://images.unsplash.com/photo-1643904524951-2a3a58856745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
   },
+  
   {
-    name: 'Coach James Tetteh',
+    name: 'Coach Terkimbi Yende',
     role: 'Head of Basketball Programs',
-    bio: 'A certified FIBA coach, James has developed basketball talent across West Africa and leads our elite training curriculum.',
-    image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'A certified FIBA coach, Yende has developed basketball talent across West Africa and leads our elite training curriculum.',
+    image: 'https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
   },
   {
-    name: 'Sandra Osei',
+    name: 'Nguumbur Damaris Uja',
     role: 'Community Outreach Coordinator',
-    bio: 'Sandra connects MBAT with families and communities, ensuring our programs reach those who need them most.',
+    bio: 'Damaris connects MBAT with families and communities, ensuring our programs reach those who need them most.',
     image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
+  
 ];
 
 export default function Team() {

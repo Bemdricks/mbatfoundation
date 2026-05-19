@@ -43,11 +43,11 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-8">
             {[
               { icon: Mail, title: 'Email Us', detail: 'info@mbatfoundation.org', sub: 'We reply within 24 hours' },
-              { icon: Phone, title: 'Call Us', detail: '+233 20 000 0000', sub: 'Mon–Fri, 8am–6pm' },
-              { icon: MapPin, title: 'Visit Us', detail: 'Accra, Ghana', sub: 'Open for community visits' },
+              { icon: Phone, title: 'Call Us', detail: '+234 20 000 0000', sub: 'Mon–Fri, 8am–6pm' },
+              { icon: MapPin, title: 'Visit Us', detail: 'N12b, Olowo Street, Sunnyvale Homes, Abuja, Nigeria', sub: 'Open for community visits' },
             ].map(({ icon: Icon, title, detail, sub }) => (
               <div key={title} className="flex gap-4 items-start">
-                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-orange-100 flex items-center justify-center flex-shrink-0">
                   <Icon size={20} className="text-orange-500" />
                 </div>
                 <div>
@@ -58,21 +58,21 @@ export default function Contact() {
               </div>
             ))}
 
-            <div className="bg-orange-500 rounded-3xl p-7 text-white">
+            <div className="bg-blue-900 p-7 text-white">
               <h3 className="font-black text-xl mb-2">Volunteer With Us</h3>
               <p className="text-orange-100 text-sm leading-relaxed mb-4">
                 Share your skills with young children. We welcome coaches, tutors, mentors, and more.
               </p>
               <a
                 href="mailto:volunteer@mbatfoundation.org"
-                className="inline-block bg-white text-orange-600 font-bold text-sm px-5 py-2.5 rounded-full hover:bg-orange-50 transition-colors"
+                className="inline-block bg-white text-orange-600 font-bold text-sm px-5 py-2.5 hover:bg-orange-50 transition-colors"
               >
                 Apply to Volunteer
               </a>
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white rounded-3xl shadow-sm p-8 sm:p-10">
+          <div className="lg:col-span-3 bg-white shadow-sm p-8 sm:p-10">
             {success ? (
               <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
                 <CheckCircle size={52} className="text-emerald-500" />
@@ -90,7 +90,7 @@ export default function Contact() {
                       onChange={handle}
                       required
                       placeholder="Your name"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
+                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
                     />
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export default function Contact() {
                       onChange={handle}
                       required
                       placeholder="you@example.com"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
+                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
                     />
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function Contact() {
                     value={form.subject}
                     onChange={handle}
                     required
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition bg-white"
+                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition bg-white"
                   >
                     <option value="">Select a subject</option>
                     <option>Donation Inquiry</option>
@@ -133,14 +133,14 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder="Tell us how you'd like to get involved or any questions you have..."
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition resize-none"
+                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition resize-none"
                   />
                 </div>
                 {error && <p className="text-red-500 text-sm">{error}</p>}
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 transition-all"
+                  className="w-full bg-blue-900 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-3.5 text-sm flex items-center justify-center gap-2 transition-all"
                 >
                   {loading ? 'Sending...' : (<><Send size={16} /> Send Message</>)}
                 </button>

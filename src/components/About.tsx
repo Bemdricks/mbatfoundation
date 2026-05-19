@@ -1,8 +1,9 @@
 import { Target, Eye, Users } from 'lucide-react';
+import bgPic from '../gallery/bg.jpg';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-gradient-to-r from-gray-100 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -21,7 +22,7 @@ export default function About() {
               discipline, teamwork, perseverance, and leadership alongside reading, writing, and numeracy.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-3 gap-2">
               {[
                 {
                   icon: Target,
@@ -39,8 +40,8 @@ export default function About() {
                   desc: 'Holistic development that unites learning, play, and mentorship.',
                 },
               ].map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="bg-gray-50 rounded-2xl p-5 hover:bg-orange-50 transition-colors group">
-                  <div className="w-10 h-10 bg-orange-100 group-hover:bg-orange-500 rounded-xl flex items-center justify-center mb-3 transition-colors">
+                <div key={title} className="bg-gray-100 p-5 hover:bg-orange-50 transition-colors group">
+                  <div className="w-10 h-10 bg-orange-100 group-hover:bg-orange-500 flex items-center justify-center mb-3 transition-colors">
                     <Icon size={18} className="text-orange-500 group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="font-bold text-gray-900 text-sm mb-1">{title}</h3>
@@ -51,22 +52,22 @@ export default function About() {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={bgPic}
                 alt="Children learning"
-                className="w-full h-[520px] object-cover"
+                className="w-full h-[520px] rounded-3xl object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 max-w-[220px]">
-              <p className="text-3xl font-black text-orange-500">500+</p>
+            <div className="absolute -bottom-6 -left-6 bg-white shadow-xl p-5 max-w-[220px]">
+              <p className="text-3xl font-black text-orange-500">50+</p>
               <p className="text-gray-700 font-semibold text-sm">Children empowered</p>
               <p className="text-gray-400 text-xs mt-1">across our programs since founding</p>
             </div>
-            <div className="absolute -top-6 -right-6 bg-orange-500 rounded-2xl shadow-xl p-5 max-w-[180px]">
-              <p className="text-3xl font-black text-white">12</p>
-              <p className="text-white/90 font-semibold text-sm">Years of service</p>
+            <div className="absolute -top-6 -right-6 bg-orange-500 shadow-xl p-5 max-w-[180px]">
+              <p className="text-3xl font-black text-white">First</p>
+              <p className="text-white/90 font-semibold text-sm">Year of service</p>
               <p className="text-orange-200 text-xs mt-1">creating lasting change</p>
             </div>
           </div>

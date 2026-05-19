@@ -7,9 +7,10 @@ const programs = [
     title: 'Academic Support Program',
     desc: 'We provide structured after-school tutoring, learning materials, and mentorship to help children achieve academic excellence.',
     features: ['After-school tutoring', 'Learning materials & supplies', 'Literacy & numeracy coaching', 'Academic mentors'],
-    image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJsYWNrJTIwa2lkcyUyMGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
     color: 'from-blue-600 to-blue-800',
     accent: 'bg-blue-100 text-blue-600',
+    cardBg: 'bg-blue-100',
   },
   {
     icon: Dribbble,
@@ -17,9 +18,10 @@ const programs = [
     title: 'Basketball Development Program',
     desc: 'Our flagship sports program trains children in basketball from fundamentals to advanced play, building discipline and teamwork.',
     features: ['Certified coaching staff', 'Skills & drills training', 'Inter-school tournaments', 'Fitness & conditioning'],
-    image: 'https://images.pexels.com/photos/1596902/pexels-photo-1596902.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1559838831-d8fbd8af6469?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBraWRzJTIwYmFza2V0YmFsbHxlbnwwfHwwfHx8MA%3D%3D',
     color: 'from-orange-500 to-red-600',
     accent: 'bg-orange-100 text-orange-600',
+    cardBg: 'bg-orange-100',
   },
   {
     icon: GraduationCap,
@@ -27,19 +29,20 @@ const programs = [
     title: 'Youth Leadership & Life Skills',
     desc: 'Beyond the classroom and court, we prepare young people for life — teaching communication, confidence, and community leadership.',
     features: ['Leadership workshops', 'Public speaking training', 'Community service projects', 'Career guidance'],
-    image: 'https://images.pexels.com/photos/8613312/pexels-photo-8613312.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1544476866-ce192b63bd7f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBraWRzJTIwbGVhZGVyc2hpcHxlbnwwfHwwfHx8MA%3D%3D',
     color: 'from-emerald-600 to-teal-700',
     accent: 'bg-emerald-100 text-emerald-600',
+    cardBg: 'bg-emerald-100',
   },
 ];
 
 export default function Programs() {
   return (
     <section id="programs" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-orange-500 font-semibold text-sm uppercase tracking-widest">What We Do</span>
-          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mt-3 mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mt-3 mb-4 px-4 leading-tight">
             Programs That <span className="text-orange-500">Change Lives</span>
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">
@@ -47,11 +50,11 @@ export default function Programs() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-3">
           {programs.map((p) => {
             const Icon = p.icon;
             return (
-              <div key={p.title} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+              <div key={p.title} className={`${p.cardBg}  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1`}>
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={p.image}
@@ -59,7 +62,7 @@ export default function Programs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${p.color} opacity-60`} />
-                  <div className={`absolute top-4 left-4 inline-flex items-center gap-1.5 ${p.accent} text-xs font-bold px-3 py-1.5 rounded-full`}>
+                  <div className={`absolute top-4 left-4 inline-flex items-center gap-1.5 ${p.accent} text-xs font-bold  px-3 py-1.5`}>
                     <Icon size={12} />
                     {p.tag}
                   </div>
