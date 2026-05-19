@@ -1,33 +1,38 @@
-
+import basketballTraining from "../gallery/basketball-training.jpg";
+import classroom from '../gallery/classroom.jpg';
+import basketballGame from '../gallery/mbat003.jpg';
+import youthBallPlayer from '../gallery/youthBasketball.jpeg';
+import leadership from '../gallery/mbt001.jpg';
+import students from '../gallery/classroom2.jpg';
 
 const images = [
   {
-    src: 'src/gallery/basketball-training.jpg',
+    src: basketballTraining,
     alt: 'Basketball training session',
     span: 'col-span-2 row-span-2',
   },
   {
-    src: 'src/gallery/classroom.jpg',
+    src: classroom,
     alt: 'Children in classroom',
     span: '',
   },
   {
-    src: 'src/gallery/mbat003.jpg',
+    src: basketballGame,
     alt: 'Basketball game',
     span: '',
   },
   {
-    src: 'src/gallery/youthBasketball.jpeg',
+    src: youthBallPlayer,
     alt: 'Youth basketball player',
     span: '',
   },
   {
-    src: 'src/gallery/mbt001.jpg',
+    src: leadership,
     alt: 'Youth leadership workshop',
     span: '',
   },
   {
-    src: 'src/gallery/classroom2.jpg',
+    src: students,
     alt: 'Students studying',
     span: 'col-span-2',
   },
