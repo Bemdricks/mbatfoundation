@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '../mbatLogo.png';
 
 interface NavbarProps {
   onDonate: () => void;
@@ -32,7 +33,7 @@ export default function Navbar({ onDonate }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
-        <img className='w-full h-20 my-4' src="/src/mbatLogo.png" alt="mbatLogo" />
+        <img className='w-full h-20 my-4' src={Logo} alt="mbatLogo" />
         </a>
 
         <nav className="hidden md:flex items-center gap-7">
