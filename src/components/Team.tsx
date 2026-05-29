@@ -1,35 +1,40 @@
 import { Linkedin, Twitter } from 'lucide-react';
+import Terseer from '../images/Terseer.jpeg';
+import Bem from '../images/Bem.jpeg';
+import Sammy from'../images/Sammy.jpeg';
+import Mavis from '../images/Mavis.jpeg';
+import Damaris from '../images/Damaris.jpeg';
 
 const boardTrustees = [
   {
     name: 'Terseer Kelvin Addingi',
     role: 'Founder & Executive Director',
     bio: 'Former College basketball player turned philantroph. Terseer founded MBAT with a vision to uplift youth through sport and learning.',
-    image: 'https://images.unsplash.com/photo-1606459431839-90b942dc3754?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwbWFsZSUyMHBvdHJhaXRzfGVufDB8fDB8fHww',
+    image: Terseer,
   },
   {
     name: 'Nguumbur Damaris Uja',
     role: 'Board Member',
     bio: 'Damaris connects MBAT with families and communities, ensuring our programs reach those who need them most.',
-    image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: Damaris,
   },
   {
     name: 'Bem Benjamin De',
     role: 'Board Member',
     bio: 'Bem designs and oversees the academic programs that help children reach their full potential.',
-    image: 'https://images.unsplash.com/photo-1643904524951-2a3a58856745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
+    image: Bem,
   },
   {
     name: 'Mavis Hembadoon Ojiji',
     role: 'Board Member',
-    bio: 'Damaris connects MBAT with families and communities, ensuring our programs reach those who need them most.',
-    image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'Mavis connects MBAT with families and communities, ensuring our programs reach those who need them most.',
+    image: Mavis,
   },
   {
     name: 'Samson Adama',
     role: 'Board Member',
     bio: ' Samson also oversees the academic programs that help children reach their full potential.',
-    image: 'https://images.unsplash.com/photo-1643904524951-2a3a58856745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
+    image: Sammy,
   },
   
 ];
