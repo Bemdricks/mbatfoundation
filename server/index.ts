@@ -16,6 +16,7 @@ import {
   initializeTransaction,
   isSuccessfulCharge,
   newReference,
+  paystackPublicKey,
   paymentKind,
   signatureIsValid,
   verifyTransaction,
@@ -45,7 +46,11 @@ function fail(res: Response, status: number, error: string) {
 const router = express.Router();
 
 router.get('/health', (_req, res) => {
-  res.json({ ok: true });
+  res.json({ ok: true, paystack: Boolean(paystackPublicKey()) });
+});
+
+router.get('/config', (_req, res) => {
+  res.json({ paystackPublicKey: paystackPublicKey() });
 });
 
 router.post('/initialize-donation', async (req, res) => {
@@ -102,6 +107,7 @@ router.post('/initialize-donation', async (req, res) => {
     return res.json({
       access_code: data.data.access_code,
       reference: data.data.reference,
+      public_key: paystackPublicKey(),
     });
   } catch (err) {
     console.error(err);
@@ -164,6 +170,7 @@ router.post('/initialize-camp-registration', async (req, res) => {
       reference: data.data.reference,
       amount: CAMP_FEE_NGN,
       currency: 'NGN',
+      public_key: paystackPublicKey(),
     });
   } catch (err) {
     console.error(err);

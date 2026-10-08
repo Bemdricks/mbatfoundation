@@ -65,12 +65,6 @@ export default function Camp() {
       return;
     }
 
-    const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
-    if (!publicKey) {
-      setError('Payment is not configured. Please contact support.');
-      return;
-    }
-
     setLoading(true);
     setError('');
 

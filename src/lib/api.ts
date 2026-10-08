@@ -5,6 +5,7 @@ interface InitializeResponse {
   reference: string;
   amount?: number;
   currency?: string;
+  public_key?: string;
 }
 
 interface VerifyResponse {

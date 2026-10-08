@@ -25,10 +25,22 @@ function authHeaders(secret: string) {
   };
 }
 
+function cleanEnv(value: string | undefined) {
+  return value?.trim().replace(/^["']|["']$/g, '') || '';
+}
+
 export function paystackSecret() {
-  const secret = process.env.PAYSTACK_SECRET_KEY;
+  const secret = cleanEnv(process.env.PAYSTACK_SECRET_KEY);
   if (!secret) throw new Error('PAYSTACK_SECRET_KEY is not set');
   return secret;
+}
+
+export function paystackPublicKey() {
+  return (
+    cleanEnv(process.env.PAYSTACK_PUBLIC_KEY) ||
+    cleanEnv(process.env.VITE_PAYSTACK_PUBLIC_KEY) ||
+    ''
+  );
 }
 
 export function newReference(prefix: string) {
