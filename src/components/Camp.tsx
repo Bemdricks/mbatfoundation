@@ -127,7 +127,7 @@ export default function Camp() {
               3-Day Basketball Camp &amp; Tournament
             </h2>
             <p className="text-orange-100 text-base sm:text-lg leading-relaxed mb-6">
-              Kids and young adults, join MBAT for three days of skills, games, and competition —
+              Kids and young adults, join MDF for three days of skills, games, and competition —
               26th to 28th December 2026 in Kusuv Village, Buruku LGA, Benue State.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-white">

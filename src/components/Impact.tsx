@@ -11,13 +11,13 @@ const testimonials = [
   {
     name: 'Samuel A.',
     role: 'Program Graduate, now University Student',
-    quote: 'MBAT gave me the discipline to study and the confidence to lead. Basketball taught me that hard work always pays off. Today I am at university on a scholarship.',
+    quote: 'MDF gave me the discipline to study and the confidence to lead. Basketball taught me that hard work always pays off. Today I am at university on a scholarship.',
     image: 'https://images.unsplash.com/photo-1596529257881-85dfcdc8f880?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbWFsZSUyMHBvdHJhaXRzfGVufDB8fDB8fHww',
   },
   {
     name: 'David O.',
     role: 'Parent of Two Program Participants',
-    quote: 'I have watched my children transform. They are more focused, disciplined, and happy. MBAT is not just about basketball — it is about building good human beings.',
+    quote: 'I have watched my children transform. They are more focused, disciplined, and happy. MDF is not just about basketball — it is about building good human beings.',
     image: 'https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
   },
   {

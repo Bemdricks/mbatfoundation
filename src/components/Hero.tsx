@@ -30,7 +30,7 @@ export default function Hero({ onDonate }: HeroProps) {
         </h1>
 
         <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          MBAT Development Foundation empowers young children with quality education,
+          MDF Development Foundation empowers young children with quality education,
           life skills, and world-class basketball training — shaping champions on and off the court.
         </p>
 

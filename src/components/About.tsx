@@ -13,7 +13,7 @@ export default function About() {
               <span className="text-orange-500">A Community</span>
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              MBAT Development Foundation was established with a single purpose: to give every young child
+              MDF Development Foundation was established with a single purpose: to give every young child
               the tools they need to succeed. We believe that access to quality education and structured
               sports programs transforms not just individuals, but entire communities.
             </p>

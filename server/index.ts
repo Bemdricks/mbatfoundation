@@ -295,7 +295,7 @@ const port = Number(process.env.PORT) || 4000;
 connectDb()
   .then(() => {
     app.listen(port, '0.0.0.0', () => {
-      console.log(`MBAT API listening on port ${port}`);
+      console.log(`MDF API listening on port ${port}`);
     });
   })
   .catch((err) => {

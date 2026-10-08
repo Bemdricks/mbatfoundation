@@ -11,13 +11,13 @@ const boardTrustees = [
   {
     name: 'Terseer Kelvin Addingi',
     role: 'Founder & Executive Director',
-    bio: 'Former College basketball player turned philantroph. Terseer founded MBAT with a vision to uplift youth through sport and learning.',
+    bio: 'Former College basketball player turned philantroph. Terseer founded MDF with a vision to uplift youth through sport and learning.',
     image: Terseer,
   },
   {
     name: 'Nguumbur Damaris Uja',
     role: 'Board Member',
-    bio: 'Damaris connects MBAT with families and communities, ensuring our programs reach those who need them most.',
+    bio: 'Damaris connects MDF with families and communities, ensuring our programs reach those who need them most.',
     image: Damaris,
   },
   {
@@ -29,7 +29,7 @@ const boardTrustees = [
   {
     name: 'Mavis Hembadoon Ojiji',
     role: 'Board Member',
-    bio: 'Mavis connects MBAT with families and communities, ensuring our programs reach those who need them most.',
+    bio: 'Mavis connects MDF with families and communities, ensuring our programs reach those who need them most.',
     image: Mavis,
   },
   {
@@ -96,7 +96,7 @@ export default function Team() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-orange-500 font-semibold text-sm uppercase tracking-widest">Our Team</span>
           <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mt-3 mb-4 leading-tight">
-            The People Behind <span className="text-orange-500">MBAT</span>
+            The People Behind <span className="text-orange-500">MDF</span>
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">
             A passionate team of educators, coaches, and community builders united by a common purpose.

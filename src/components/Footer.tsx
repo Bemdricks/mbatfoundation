@@ -80,7 +80,7 @@ export default function Footer({ onDonate }: FooterProps) {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} MBAT Development Foundation. All rights reserved.
+            &copy; {new Date().getFullYear()} MDF Development Foundation. All rights reserved.
           </p>
           <div className="flex gap-5">
             <a href="#" className="text-gray-500 hover:text-gray-300 text-xs transition-colors">Privacy Policy</a>
