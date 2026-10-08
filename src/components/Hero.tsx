@@ -42,10 +42,10 @@ export default function Hero({ onDonate }: HeroProps) {
             Donate Now
           </button>
           <a
-            href="#programs"
+            href="#camp"
             className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-4 text-base transition-all hover:bg-white/10 min-w-[180px] text-center"
           >
-            Our Programs
+            Register for Camp
           </a>
         </div>
 

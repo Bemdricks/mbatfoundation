@@ -30,6 +30,7 @@ export default function Footer({ onDonate }: FooterProps) {
             <h4 className="font-bold text-sm uppercase tracking-widest text-gray-300 mb-5">Quick Links</h4>
             <ul className="space-y-3">
               {[
+                ['Basketball Camp', '#camp'],
                 ['About Us', '#about'],
                 ['Our Programs', '#programs'],
                 ['Our Impact', '#impact'],

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { submitContact } from '../lib/api';
 
 type FormState = { name: string; email: string; subject: string; message: string };
 const empty: FormState = { name: '', email: '', subject: '', message: '' };
@@ -18,12 +18,16 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    const { error: err } = await supabase.from('contact_messages').insert([form]);
-    setLoading(false);
-    if (err) { setError('Something went wrong. Please try again.'); return; }
-    setSuccess(true);
-    setForm(empty);
-    setTimeout(() => setSuccess(false), 6000);
+    try {
+      await submitContact(form);
+      setSuccess(true);
+      setForm(empty);
+      setTimeout(() => setSuccess(false), 6000);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -43,8 +47,8 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-8">
             {[
               { icon: Mail, title: 'Email Us', detail: 'info@mbatfoundation.org', sub: 'We reply within 24 hours' },
-              { icon: Phone, title: 'Call Us', detail: '+234 20 000 0000', sub: 'Mon–Fri, 8am–6pm' },
-              { icon: MapPin, title: 'Visit Us', detail: 'N12b, Olowo Street, Sunnyvale Homes, Abuja, Nigeria', sub: 'Open for community visits' },
+              { icon: Phone, title: 'Call Us', detail: '+23490 5555 2012', sub: 'Mon–Fri, 8am–6pm' },
+              { icon: MapPin, title: 'Visit Us', detail: 'Plot 632, James Ogwu Onoja Crescent, Wuye, Abuja, Nigeria', sub: 'Open for community visits' },
             ].map(({ icon: Icon, title, detail, sub }) => (
               <div key={title} className="flex gap-4 items-start">
                 <div className="w-12 h-12 bg-orange-100 flex items-center justify-center flex-shrink-0">
@@ -117,6 +121,7 @@ export default function Contact() {
                   >
                     <option value="">Select a subject</option>
                     <option>Donation Inquiry</option>
+                    <option>Basketball Camp</option>
                     <option>Volunteer Application</option>
                     <option>Partnership Opportunity</option>
                     <option>Program Information</option>

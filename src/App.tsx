@@ -6,6 +6,7 @@ import Programs from './components/Programs';
 import Impact from './components/Impact';
 import Gallery from './components/Gallery';
 import Team from './components/Team';
+import Camp from './components/Camp';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DonateModal from './components/DonateModal';
@@ -17,6 +18,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar onDonate={() => setDonateOpen(true)} />
       <Hero onDonate={() => setDonateOpen(true)} />
+      <Camp />
       <About />
       <Programs />
       <Impact />
