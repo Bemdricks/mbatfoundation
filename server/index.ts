@@ -1,10 +1,6 @@
 import { existsSync } from 'node:fs';
 import cors from 'cors';
 import express, { type Request, type Response } from 'express';
-
-if (existsSync('.env')) {
-  process.loadEnvFile('.env');
-}
 import {
   CAMP_EVENT,
   CAMP_FEE_KOBO,
@@ -25,6 +21,10 @@ import {
   verifyTransaction,
   type PaystackTransaction,
 } from './paystack';
+
+if (existsSync('.env') && typeof process.loadEnvFile === 'function') {
+  process.loadEnvFile('.env');
+}
 
 const CURRENCY_SYMBOLS: Record<string, string> = { NGN: '₦', USD: '$', GBP: '£', EUR: '€' };
 const MIN_AMOUNTS: Record<string, number> = { NGN: 100, USD: 1, GBP: 1, EUR: 1 };
@@ -287,11 +287,15 @@ const port = Number(process.env.PORT) || 4000;
 
 connectDb()
   .then(() => {
-    app.listen(port, () => {
+    app.listen(port, '0.0.0.0', () => {
       console.log(`MBAT API listening on port ${port}`);
     });
   })
   .catch((err) => {
-    console.error('Failed to start API', err);
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('Failed to start API:', message);
+    if (message.includes('querySrv') || message.includes('ECONNREFUSED') || message.includes('ENOTFOUND')) {
+      console.error('MongoDB DNS/SRV lookup failed. In Atlas → Network Access, allow 0.0.0.0/0, and confirm MONGODB_URI.');
+    }
     process.exit(1);
   });
