@@ -4,6 +4,8 @@ import Bem from '../images/Bem.jpeg';
 import Sammy from'../images/Sammy.jpeg';
 import Mavis from '../images/Mavis.jpeg';
 import Damaris from '../images/Damaris.jpeg';
+import Melaba from '../images/Melaba.jpeg';
+import Ene from '../images/Ene.jpeg'; 
 
 const boardTrustees = [
   {
@@ -45,6 +47,18 @@ const technicalMembers =[
     role: 'Head of Basketball Programs',
     bio: 'A certified FIBA coach, Yende has developed basketball talent across West Africa and leads our elite training curriculum.',
     image: 'https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBtYWxlJTIwcG90cmFpdHN8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    name: 'Melaba Aondongu',
+    role: 'Assistant Coach',
+    bio: 'A certified FIBA coach, Melaba has developed hiimself into a top tier basketball coach for the kids.',
+    image: Melaba,
+  },
+  {
+    name: 'Obeya Susan Ene',
+    role: 'Head of Digital Culture & Media',
+    bio: 'Has a wealth of experience and passion for digital culture and media, and is a great asset to the team.',
+    image: Ene,
   },
 ];
 

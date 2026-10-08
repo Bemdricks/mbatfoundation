@@ -243,7 +243,7 @@ export default function DonateModal({ open, onClose }: DonateModalProps) {
               </button>
 
               <p className="text-gray-400 text-xs text-center">
-                Secure payment via Paystack. MBAT Development Foundation is a registered NGO.
+                Secure payment via Paystack. Mbatomun Development Foundation is a registered NGO.
               </p>
             </form>
           )}
