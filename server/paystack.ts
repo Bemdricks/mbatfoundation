@@ -43,6 +43,14 @@ export function paystackPublicKey() {
   );
 }
 
+export function paystackMode(): 'live' | 'test' | 'unset' {
+  const secret = cleanEnv(process.env.PAYSTACK_SECRET_KEY);
+  if (!secret) return 'unset';
+  if (secret.startsWith('sk_live_')) return 'live';
+  if (secret.startsWith('sk_test_')) return 'test';
+  return 'unset';
+}
+
 export function newReference(prefix: string) {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
 }

@@ -16,6 +16,7 @@ import {
   initializeTransaction,
   isSuccessfulCharge,
   newReference,
+  paystackMode,
   paystackPublicKey,
   paymentKind,
   signatureIsValid,
@@ -46,7 +47,7 @@ function fail(res: Response, status: number, error: string) {
 const router = express.Router();
 
 router.get('/health', (_req, res) => {
-  res.json({ ok: true, paystack: Boolean(paystackPublicKey()) });
+  res.json({ ok: true, paystack: Boolean(paystackPublicKey()), paystackMode: paystackMode() });
 });
 
 router.get('/config', (_req, res) => {
@@ -295,7 +296,12 @@ const port = Number(process.env.PORT) || 4000;
 connectDb()
   .then(() => {
     app.listen(port, '0.0.0.0', () => {
+      const mode = paystackMode();
       console.log(`MDF API listening on port ${port}`);
+      console.log(`Paystack mode: ${mode}`);
+      if (mode === 'test') {
+        console.warn('Paystack is using TEST keys. Replace PAYSTACK_SECRET_KEY and PAYSTACK_PUBLIC_KEY with live keys on Render.');
+      }
     });
   })
   .catch((err) => {
