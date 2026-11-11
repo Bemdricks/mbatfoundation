@@ -61,19 +61,32 @@ export default function Footer({ onDonate }: FooterProps) {
             <h4 className="font-bold text-sm uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
             <div className="flex gap-3">
               {[
-                { Icon: Facebook, label: 'Facebook' },
-                { Icon: Instagram, label: 'Instagram' },
+                { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591797930606' },
+                { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/mbatfoundation' },
                 { Icon: Twitter, label: 'Twitter' },
                 { Icon: Youtube, label: 'YouTube' },
-              ].map(({ Icon, label }) => (
-                <button
-                  key={label}
-                  aria-label={label}
-                  className="w-9 h-9 bg-gray-800 hover:bg-orange-500 rounded-xl flex items-center justify-center transition-colors"
-                >
-                  <Icon size={16} className="text-gray-400 group-hover:text-white" />
-                </button>
-              ))}
+              ].map(({ Icon, label, href }) =>
+                href ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-9 h-9 bg-gray-800 hover:bg-orange-500 rounded-xl flex items-center justify-center transition-colors"
+                  >
+                    <Icon size={16} className="text-gray-400 group-hover:text-white" />
+                  </a>
+                ) : (
+                  <button
+                    key={label}
+                    aria-label={label}
+                    className="w-9 h-9 bg-gray-800 hover:bg-orange-500 rounded-xl flex items-center justify-center transition-colors"
+                  >
+                    <Icon size={16} className="text-gray-400 group-hover:text-white" />
+                  </button>
+                )
+              )}
             </div>
           </div>
         </div>
